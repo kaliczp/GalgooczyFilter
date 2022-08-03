@@ -16,3 +16,8 @@ Qmod10min <- c(xts10min, Q.xts)
 select <- is.na(Qmod10min)
 Qmod10min <- na.approx(Qmod10min)
 Qmod10minOK <- Qmod10min[select]
+
+## Control plot
+plot.zoo(Q.xts)
+lines(as.zoo(Qmod5minOK), col = 2)
+lines(as.zoo(Qmod10minOK), col = 3)
